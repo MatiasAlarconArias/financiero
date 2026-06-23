@@ -1,23 +1,107 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+
 
 html,
 body {
   min-height: 100%;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --surface-muted: #f1f5f9;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  --primary: #1e3a8a;
+  --primary-light: #2563eb;
+  --primary-dark: #172554;
+
+  --secondary: #0f766e;
+  --secondary-light: #14b8a6;
+
+  --accent: #f59e0b;
+  --accent-soft: #fef3c7;
+
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --danger: #dc2626;
+
+  --border: #e2e8f0;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* Opcional: base general del sitio */
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+/* Clases reutilizables */
+.bg-app {
+  background-color: var(--background);
+}
+
+.bg-surface {
+  background-color: var(--surface);
+}
+
+.bg-surface-muted {
+  background-color: var(--surface-muted);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-brand {
+  color: var(--primary);
+}
+
+.bg-brand {
+  background-color: var(--primary);
+}
+
+.bg-brand-light {
+  background-color: var(--primary-light);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.text-secondary-brand {
+  color: var(--secondary);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.bg-accent-soft {
+  background-color: var(--accent-soft);
+}
+
+.text-success {
+  color: var(--success);
+}
+
+.text-warning {
+  color: var(--warning);
+}
+
+.text-danger {
+  color: var(--danger);
+}
+
+.border-app {
+  border-color: var(--border);
 }
