@@ -21,7 +21,7 @@ export async function getLatestRates(
 
   const url = `${FRANKFURTER_BASE_URL}/latest?${params.toString()}`;
 
-  const response = await fetch(url);
+  const response = await fetch(url, { next: { revalidate: 60 * 60 * 12 } });
 
   if (!response.ok) {
     throw new Error(`Error Frankfurter API: ${response.status}`);

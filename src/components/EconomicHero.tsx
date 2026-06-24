@@ -10,6 +10,8 @@ export type CountryEconomicData = {
   gdp: number | null;
   inflation: number | null;
   unemployment: number | null;
+  population: number | null;
+  exchangeRate: number | null;
   trend: { year: number; value: number | null }[];
 };
 
