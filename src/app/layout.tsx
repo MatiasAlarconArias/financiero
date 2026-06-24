@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Financiero",
-  description: "Aplicacion financiera",
+  title: "MacroPulse LATAM | Indicadores económicos",
+  description: "Indicadores económicos de América Latina con datos abiertos.",
 };
 
 export default function RootLayout({

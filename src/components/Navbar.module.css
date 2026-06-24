@@ -9,9 +9,6 @@
 
 .navbar {
   width: 100%;
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .navbarContent {
@@ -192,20 +189,12 @@
 }
 
 @media (min-width: 640px) {
-  .navbar {
-    padding: 0 1.5rem;
-  }
-
   .logo {
     font-size: 1.25rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .navbar {
-    padding: 0 2rem;
-  }
-
   .desktopLinks,
   .compareButton {
     display: flex;

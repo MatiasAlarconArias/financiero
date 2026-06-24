@@ -33,7 +33,7 @@ export default function Navbar() {
 
   return (
     <header className={styles.header}>
-      <nav className={styles.navbar} aria-label="Navegación principal">
+      <nav className={`${styles.navbar} site-container`} aria-label="Navegación principal">
         <div className={styles.navbarContent}>
           <a
             className={styles.logo}

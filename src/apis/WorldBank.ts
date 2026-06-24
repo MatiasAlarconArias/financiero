@@ -31,11 +31,19 @@ export interface WorldBankDataPoint {
 export async function getWorldBankIndicator(
   countryCode: string,
   indicatorCode: WorldBankIndicator,
-  perPage = 10
+  perPage = 10,
+  dateRange?: string,
 ): Promise<WorldBankDataPoint[]> {
-  const url = `${WORLD_BANK_BASE_URL}/country/${countryCode}/indicator/${indicatorCode}?format=json&per_page=${perPage}`;
+  const params = new URLSearchParams({
+    format: "json",
+    per_page: String(perPage),
+  });
 
-  const response = await fetch(url);
+  if (dateRange) params.set("date", dateRange);
+
+  const url = `${WORLD_BANK_BASE_URL}/country/${countryCode}/indicator/${indicatorCode}?${params}`;
+
+  const response = await fetch(url, { next: { revalidate: 60 * 60 * 12 } });
 
   if (!response.ok) {
     throw new Error("Error al obtener datos desde World Bank API");
