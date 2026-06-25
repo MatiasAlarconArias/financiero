@@ -10,6 +10,8 @@ const navigation = [
   { label: "Comparador", href: "#comparador" },
   { label: "Gráficos", href: "#graficos" },
   { label: "Rankings", href: "#rankings" },
+  { label: "Perfil", href: "#perfil" },
+  { label: "Aprende", href: "#aprende" },
   { label: "Conversor", href: "#conversor" },
   { label: "Fuentes", href: "#fuentes" },
 ] as const;

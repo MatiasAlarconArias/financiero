@@ -1,0 +1,154 @@
+.section {
+  scroll-margin-top: 64px;
+  padding: 86px 0 80px;
+  color: #0f172a;
+  background: #ffffff;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(280px, .9fr) minmax(0, 1.75fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.copy {
+  max-width: 420px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #1761ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.copy h2 {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.1rem);
+  line-height: 1.12;
+}
+
+.copy > p {
+  margin: 16px 0 26px;
+  color: #334155;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.fact {
+  padding: 18px 20px;
+  color: #1e3a8a;
+  background: #eef5ff;
+  border: 1px solid #b8d4ff;
+  border-radius: 14px;
+}
+
+.fact strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.fact p {
+  margin: 0;
+  color: #334155;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.accordion {
+  display: grid;
+  gap: 12px;
+}
+
+.item,
+.itemOpen {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #dbe2ec;
+  border-radius: 14px;
+}
+
+.item h3,
+.itemOpen h3 {
+  margin: 0;
+}
+
+.item button,
+.itemOpen button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  min-height: 52px;
+  padding: 0 20px;
+  color: #020617;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.itemOpen button {
+  border-bottom: 1px solid #edf1f6;
+}
+
+.chevron,
+.chevronOpen {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: #2563eb;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  transition: transform 160ms ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.panel {
+  padding: 16px 20px 20px;
+}
+
+.panel p {
+  margin: 0;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .copy {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-block: 56px;
+  }
+
+  .item button,
+  .itemOpen button {
+    padding-inline: 16px;
+  }
+
+  .panel {
+    padding-inline: 16px;
+  }
+}
