@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, type MouseEvent } from "react";
 import styles from "./Navbar.module.css";
 
@@ -39,8 +40,16 @@ export default function Navbar() {
             className={styles.logo}
             href="#inicio"
             onClick={(event) => handleNavigation(event, "#inicio")}
+            aria-label="MacroPulse LATAM - Inicio"
           >
-            MacroPulse <span>LATAM</span>
+            <Image
+              className={styles.logoImage}
+              src="/logo.png"
+              alt="MacroPulse LATAM"
+              width={1306}
+              height={439}
+              priority
+            />
           </a>
 
           <div className={styles.desktopLinks}>
