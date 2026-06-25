@@ -1,0 +1,286 @@
+.section {
+  scroll-margin-top: 64px;
+  padding: 78px 0 86px;
+  color: #0f172a;
+  background: #f7f9fc;
+}
+
+.heading {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #f59e0b;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.heading h2 {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.1rem);
+  line-height: 1.12;
+}
+
+.heading p:not(.eyebrow) {
+  margin: 8px 0 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+.panel {
+  overflow: hidden;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #dbe2ec;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgb(15 23 42 / 10%);
+}
+
+.controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #edf1f6;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  min-width: 92px;
+}
+
+.field:first-child {
+  min-width: 180px;
+}
+
+.field span,
+.countryGroup > span {
+  color: #91a0bd;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.field select {
+  height: 38px;
+  padding: 0 16px;
+  color: #020617;
+  background: #f8fafc;
+  border: 1px solid #dbe2ec;
+  border-radius: 10px;
+  outline: 0;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.field select:focus-visible {
+  border-color: #bcd1ff;
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 18%);
+}
+
+.countryGroup {
+  display: grid;
+  gap: 7px;
+  flex: 1;
+  min-width: 0;
+  margin-left: auto;
+}
+
+.countryButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.countryButton,
+.countryActive {
+  min-height: 31px;
+  padding: 0 13px;
+  border: 1px solid #dbe2ec;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.countryButton {
+  color: #334155;
+  background: #f8fafc;
+}
+
+.countryActive {
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 12%);
+}
+
+.chartScroller {
+  overflow-x: auto;
+}
+
+.chartWrap {
+  position: relative;
+  min-width: 720px;
+  padding-top: 20px;
+}
+
+.chart {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gridLine,
+.yearLine {
+  stroke: #e8eef6;
+  stroke-dasharray: 3 4;
+}
+
+.yearLine {
+  opacity: .75;
+}
+
+.seriesLine {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.4;
+  pointer-events: none;
+}
+
+.dataPoint {
+  transition:
+    r 140ms ease,
+    opacity 140ms ease;
+}
+
+.activeLayer {
+  pointer-events: none;
+}
+
+.activeLine {
+  stroke: #64748b;
+  stroke-dasharray: 4 4;
+  stroke-width: 1.2;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 3;
+  min-width: 154px;
+  padding: 10px 12px;
+  color: #0f172a;
+  background: #ffffff;
+  border: 1px solid #dbe2ec;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgb(15 23 42 / 16%);
+  pointer-events: none;
+  transform: translate(-50%, calc(-100% - 12px));
+}
+
+.tooltip span,
+.tooltip small {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tooltip strong {
+  display: block;
+  margin: 5px 0 3px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.tooltip small {
+  color: #91a0bd;
+  font-weight: 600;
+}
+
+.yLabel,
+.xLabel {
+  fill: #91a0bd;
+  font-size: 11px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.legend i {
+  width: 14px;
+  height: 3px;
+  border-radius: 999px;
+}
+
+.source {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 20px;
+  color: #91a0bd;
+  font-size: 12px;
+}
+
+@media (max-width: 980px) {
+  .controls {
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .countryGroup {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+
+  .countryButtons {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-block: 56px;
+  }
+
+  .panel {
+    padding: 18px 14px;
+  }
+
+  .field,
+  .field:first-child {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .field select {
+    width: 100%;
+  }
+
+  .countryButton,
+  .countryActive {
+    flex: 1 1 calc(50% - 7px);
+  }
+
+  .source {
+    align-items: flex-start;
+  }
+}

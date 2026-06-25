@@ -13,6 +13,11 @@ export type CountryEconomicData = {
   population: number | null;
   exchangeRate: number | null;
   trend: { year: number; value: number | null }[];
+  histories: {
+    gdpGrowth: { year: number; value: number | null }[];
+    inflation: { year: number; value: number | null }[];
+    unemployment: { year: number; value: number | null }[];
+  };
 };
 
 type EconomicHeroProps = {
