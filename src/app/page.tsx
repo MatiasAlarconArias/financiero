@@ -3,6 +3,7 @@ import EconomicHero, { type CountryEconomicData } from "@/components/EconomicHer
 import EconomicIndicators from "@/components/EconomicIndicators";
 import CountryComparator from "@/components/CountryComparator";
 import HistoricalChart from "@/components/HistoricalChart";
+import RegionalRankings from "@/components/RegionalRankings";
 import { getWorldBankIndicator, WORLD_BANK_INDICATORS, type WorldBankDataPoint } from "@/apis/WorldBank";
 import { getCountryInfo } from "@/apis/RESTCountries";
 import { getLatestRates } from "@/apis/Frankfurter";
@@ -122,5 +123,5 @@ async function getCountryData(code: string): Promise<CountryEconomicData> {
 
 export default async function Home() {
   const countries = await Promise.all(COUNTRY_CODES.map(getCountryData));
-  return <><Navbar /><EconomicHero countries={countries} dataYear={DATA_YEAR} /><EconomicIndicators countries={countries} dataYear={DATA_YEAR} /><CountryComparator countries={countries} dataYear={DATA_YEAR} /><HistoricalChart countries={countries} dataYear={DATA_YEAR} /></>;
+  return <><Navbar /><EconomicHero countries={countries} dataYear={DATA_YEAR} /><EconomicIndicators countries={countries} dataYear={DATA_YEAR} /><CountryComparator countries={countries} dataYear={DATA_YEAR} /><HistoricalChart countries={countries} dataYear={DATA_YEAR} /><RegionalRankings countries={countries} dataYear={DATA_YEAR} /></>;
 }
