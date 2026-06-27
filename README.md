@@ -8,6 +8,8 @@ Colombia, Peru y Uruguay, combinando informacion abierta del Banco Mundial,
 datos de paises y tipos de cambio. Tambien incluye valores de respaldo para que
 la experiencia siga funcionando cuando alguna fuente externa no entrega datos.
 
+https://financiero-mocha.vercel.app/
+
 ## Funcionalidades
 
 - Resumen visual por pais con PIB, inflacion, desempleo, poblacion, crecimiento
